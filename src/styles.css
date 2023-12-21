@@ -1,0 +1,413 @@
+:root {
+  --bodyBgColor: hsl(218, 22%, 10%);
+  --bodyTextColor: hsl(0, 0%, 90%);
+  --bodyTextMutedColor: hsl(0, 0%, 60%);
+  --primaryColor: #2449CC;
+  --bodyTextSize: 16px;
+  --borderRadius: 3px;
+}
+
+@font-face {
+	font-family: 'Mulish';
+	src: url('Mulish-VariableFont.ttf') format('truetype');
+	font-display: swap;
+  font-weight: 1 999;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Mulish', sans-serif;
+  font-size: var(--bodyTextSize);
+
+  color: var(--bodyTextColor);
+  background-color: var(--bodyBgColor);
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  font-size: 2em;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  h1, h2 {
+    font-size: 3em;
+  }
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.4;
+  margin: 0;
+}
+
+h1 + p,
+h2 + p,
+p + p {
+  margin-top: 1.125em;
+}
+
+svg {
+  fill: currentColor;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  width: -webkit-fill-available;
+  padding-block: 1.5em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+header a:not(.btn) {
+  font-size: 1.125em;
+  font-weight: 800;
+}
+
+nav {
+  display: none;
+  flex-wrap: wrap;
+  gap: 2.25em;
+  margin-block: 4.5em 0;
+}
+
+@media (min-width: 48rem) {
+  nav {
+    display: flex;
+  }
+}
+
+nav a {
+  position: relative;
+  flex: 1 100%;
+}
+
+nav a:before {
+  content: "";
+  display: inline-block;
+  width: 2.5em;
+  height: 2px;
+  background-color: currentColor;
+  transform: translateY(-4px);
+  margin-right: 1em;
+  transition: 0.2s ease;
+}
+
+nav a.active:before {
+  width: 5em;
+}
+
+main {
+  flex-grow: 1;
+  padding-block: 3em;
+}
+
+@media (min-width: 48rem) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+    padding-block: 5em;
+  }
+
+  main aside {
+    flex: 0 22.5em;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+  }
+
+  main section {
+    flex: 0 1 38em;
+  }
+}
+
+main section {
+  display: grid;
+  gap: 8em 0;
+}
+
+footer {
+  padding-block: 1.5em;
+  text-align: center;
+}
+
+footer h2 {
+  margin-top: .75rem;
+}
+
+div:has(> .anchor) {
+  position: relative;
+}
+
+.anchor {
+  position: absolute;
+  top: -100px;
+}
+
+.section-inline {
+  max-width: 68rem;
+  margin-inline: auto;
+  padding-inline: 1.5em;
+}
+
+.section-inline--narrow {
+  max-width: 40em;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 0.875em;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  display: inline-grid;
+  place-items: center;
+  min-height: 2.14em;
+  padding-inline: 1em;
+  color: currentColor;
+  background-color: var(--primaryColor);
+  border-radius: var(--borderRadius);
+  border: 0;
+}
+
+.copyright {
+  font-size: 0.875em;
+  margin-top: 2em;
+}
+
+.text-sm {
+  font-size: 0.875em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.text-med {
+  font-size: 1.125em
+}
+
+.text-large {
+  font-size: 1.375em;
+  font-weight: 700;
+}
+
+.muted {
+  font-weight: 700;
+  color: var(--bodyTextMutedColor)
+}
+
+.columns-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75em 0
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 2.5em;
+}
+
+@media (min-width: 48rem) {
+  .columns .col-1 {
+    flex: 0 12.5rem;
+    line-height: 1.8;
+  }
+
+  .columns .col-2 {
+    flex: 1;
+  }
+}
+
+.experiences .col-1 {
+  display: none;
+}
+
+.experiences .col-2 .muted {
+  margin-top: 0.5em;
+}
+
+@media (min-width: 60rem) {
+  .experiences .col-1 {
+    display: block;
+  }
+
+  .experiences .col-2 .muted {
+    display: none;
+  }
+}
+
+.experiences a {
+  display: inline-flex;
+  align-items: center;
+  align-self: start;
+  margin-block: -1em 0;
+}
+
+.experiences a svg {
+  width: 1.2em;
+  height: 1.2em;
+  margin-left: 0.5em;
+  transition: 0.2s ease;
+}
+
+.experiences a:hover svg {
+  margin-left: 1em;
+}
+
+.projects a {
+  --bgColor: transparent;
+  position: relative;
+}
+
+.projects a:hover {
+  --bgColor: rgba(255, 255, 255, 10%);
+}
+
+.projects a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 2em);
+  height: calc(100% + 2em);
+  border-radius: 5px;
+  background-color: var(--bgColor);
+  transition: 0.2s ease;
+}
+
+.projects .image img {
+  width: 100%;
+  border-radius: var(--borderRadius);
+}
+
+@media (min-width: 48rem) {
+  .projects .image {
+    height: 10rem;
+  }
+
+  .projects .image img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+.projects .text-med {
+  display: inline-flex;
+  align-items: center;
+}
+
+.projects a svg {
+  width: 1em;
+  height: 1em;
+  margin: 0 0 -0.25em 0.35em;
+  transition: 0.2s ease;
+}
+
+.projects a:hover svg {
+  margin: 0 0 0.3em 0.55em;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 2em 0 0;
+}
+
+.tech-stack li {
+  display: inline-grid;
+  place-items: center;
+  height: 34px;
+  padding-inline: 1em;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 10%)
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1em;
+  color: currentColor;
+  font-size: 1.5em;
+}
+
+.socials svg {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+}
+
+aside .socials {
+  margin-block: 1.5em 3em;
+}
+
+@media (min-width: 48rem) {
+  aside .socials {
+    margin-block: 4em 0;
+  }
+}
+
+form {
+  max-width: 24em;
+  margin: 2em auto 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em 1em;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  display: block;
+  width: calc(100% - 1em);
+  border: 0;
+  margin-top: 0.5em;
+  padding: 2px 0.5em;
+}
+
+form input {
+  min-height: 2em;
+}
+
+form textarea {
+  min-height: 4em;
+}
+
+form .btn {
+  font-size: 1em;
+  padding-block: 0.65em;
+  margin-top: 0.75em;
+}
