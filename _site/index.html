@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Francis Fernandez Portfolio</title>
   <meta name="description" content="Frontend Developer. Crafting seamless web experiences through code mastery and innovation.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
 
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
@@ -22,9 +26,9 @@
       <p class="text-med">Crafting seamless web experiences through code mastery and innovation.</p>
 
       <nav>
-        <a href="#about" class="text-sm active">About</a>
+        <a href="#projects" class="text-sm active">Projects</a>
         <a href="#experiences" class="text-sm">Experience</a>
-        <a href="#projects" class="text-sm">Projects</a>
+        <a href="#about" class="text-sm">About</a>
       </nav>
 
       <ul class="socials">
@@ -42,15 +46,51 @@
     </aside>
 
     <section>
-      <div class="text-med scroll-targets ">
-        <span id="about" class="anchor"></span>
-        <p>My name is Francis and I’m a Frontend Developer specialising in building performant, responsive user interfaces based in Gold Coast, Australia.</p>
-        <p>I’ve worked with a wide-range of clients, from the arts, non-profit & community organisations, fashion, and businesses ranging in all shapes and sizes. My work currently consists of managing ongoing freelance clients & side projects.</p>
-        <p>When I’m not coding, I’m either watching videos, hanging out with my wife and son, or planning my next camping trip.</p>
-      </div>
+      <article class="columns-wrap scroll-targets projects">
+        <h2 class="text-large heading">Recent Projects</h2>
+        <span id="projects" class="anchor" aria-hidden="true"></span>
+        
+          <a href="https://skinkandy.com/" class="columns" target="_blank" rel="noopener">
+            <div class="col-1 image">
+              <img src="/assets/skinkandy.jpg" alt="SkinKandy image" loading="lazy">
+            </div>
+            <div class="col-2">
+              <p class="text-med">
+                SkinKandy <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
+              </p>
+              <p>Developed and managed the site. I made custom components for their quickview and quickadd functions, integrated several 3rd-party apps, and overall optimized their online retail for enhanced user experience.</p>
+            </div>
+          </a>
+        
+          <a href="https://www.mercha.com.au/" class="columns" target="_blank" rel="noopener">
+            <div class="col-1 image">
+              <img src="/assets/mercha.jpg" alt="Mercha image" loading="lazy">
+            </div>
+            <div class="col-2">
+              <p class="text-med">
+                Mercha <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
+              </p>
+              <p>Led the development of this website. Used native web components and Alpine.js to bring flexibility and reactivity to their product, cart and accounts pages. Set up their product packs (product bundles) all the way to its frontend.</p>
+            </div>
+          </a>
+        
+          <a href="https://coffeeclub.com.au/" class="columns" target="_blank" rel="noopener">
+            <div class="col-1 image">
+              <img src="/assets/thecoffeeclub.jpg" alt="The Coffee Club image" loading="lazy">
+            </div>
+            <div class="col-2">
+              <p class="text-med">
+                The Coffee Club <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
+              </p>
+              <p>Collaborated with the team to deliver the website. Made use of Shopify&#39;s metafields to display specialized information regarding their coffees and their menu items.</p>
+            </div>
+          </a>
+        
+      </article>
 
-      <div class="columns-wrap scroll-targets experiences">
-        <span id="experiences" class="anchor"></span>
+      <article class="columns-wrap scroll-targets experiences">
+        <h2 class="text-large heading">Experience</h2>
+        <span id="experiences" class="anchor" aria-hidden="true"></span>
         
           <div class="columns">
             <p class="col-1 text-sm muted">Jun 2020 &ndash; Nov 2023</p>
@@ -113,48 +153,15 @@
         <a href="/assets/FrancisFernandez_Resume.pdf" target="_blank" rel="noopener">
           View Full Resume <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
         </a>
-      </div>
+      </article>
 
-      <div class="columns-wrap scroll-targets projects">
-        <span id="projects" class="anchor"></span>
-        
-          <a href="https://skinkandy.com/" class="columns" target="_blank" rel="noopener">
-            <div class="col-1 image">
-              <img src="/assets/skinkandy.jpg" alt="SkinKandy image" loading="lazy">
-            </div>
-            <div class="col-2">
-              <p class="text-med">
-                SkinKandy <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
-              </p>
-              <p>Developed and managed the site. I made custom components for their quickview and quickadd functions, integrated several 3rd-party apps, and overall optimized their online retail for enhanced user experience.</p>
-            </div>
-          </a>
-        
-          <a href="https://www.mercha.com.au/" class="columns" target="_blank" rel="noopener">
-            <div class="col-1 image">
-              <img src="/assets/mercha.jpg" alt="Mercha image" loading="lazy">
-            </div>
-            <div class="col-2">
-              <p class="text-med">
-                Mercha <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
-              </p>
-              <p>Led the development of this website. Used native web components and Alpine.js to bring flexibility and reactivity to their product, cart and accounts pages. Set up their product packs (product bundles) all the way to its frontend.</p>
-            </div>
-          </a>
-        
-          <a href="https://coffeeclub.com.au/" class="columns" target="_blank" rel="noopener">
-            <div class="col-1 image">
-              <img src="/assets/thecoffeeclub.jpg" alt="The Coffee Club image" loading="lazy">
-            </div>
-            <div class="col-2">
-              <p class="text-med">
-                The Coffee Club <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
-              </p>
-              <p>Collaborated with the team to deliver the website. Made use of Shopify&#39;s metafields to display specialized information regarding their coffees and their menu items.</p>
-            </div>
-          </a>
-        
-      </div>
+      <article class="text-med scroll-targets">
+        <h2 class="text-large heading">About me</h2>
+        <span id="about" class="anchor" aria-hidden="true"></span>
+        <p>My name is Francis and I’m a Frontend Developer specialising in building performant, responsive user interfaces based in Gold Coast, Australia.</p>
+        <p>I’ve worked with a wide-range of clients, from the arts, non-profit & community organisations, fashion, and businesses ranging in all shapes and sizes. My work currently consists of managing ongoing freelance clients & side projects.</p>
+        <p>When I’m not coding, I’m either watching videos, hanging out with my wife and son, or planning my next camping trip.</p>
+      </article>
     </section>
   </main>
 

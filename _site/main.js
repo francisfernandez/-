@@ -4,7 +4,7 @@ const domReady = () => {
     (entries) => {
       const intersecting = entries.find((entry) => entry.isIntersecting);
       if (intersecting) {
-        const handle = intersecting.target.firstElementChild.id;
+        const handle = intersecting.target.firstElementChild.nextElementSibling.id;
         const currentNav = document.querySelector(`nav a[href="#${handle}"]`);
         if (!currentNav) return;
         navlinks.forEach(link => link.classList.remove('active'));
